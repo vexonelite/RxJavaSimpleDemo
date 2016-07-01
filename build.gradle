@@ -1,0 +1,23 @@
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.reactivex:rxjava:1.1.5'
+}
+
+task run(type:JavaExec) {
+    //main = 'com.vexonelite.rxjava.demo.ErrorHandlingTestOne'
+    //main = 'com.vexonelite.rxjava.demo.ForTestOne
+    //main = 'com.vexonelite.rxjava.demo.ForTestTwo
+    main = 'net.danlew.sample.krzysztofgoralski'
+    //main = 'com.vexonelite.rxjava.demo.TestObservableConcat
+    //main = 'com.vexonelite.rxjava.demo.TestObservableFrom'
+   classpath = sourceSets.main.runtimeClasspath
+}
